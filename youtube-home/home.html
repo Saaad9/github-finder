@@ -1,28 +1,27 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube-Home-Saaad99</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
 </head>
+
 <body>
     <div class="header">
-        
+
         <div class="left_section">
-            
+
             <div class="hamburger_icon">
-                <button>
-                    <img src="">
-                </button>
+                <img src="assets/icons/hamburger-menu.svg">
             </div>
 
             <div class="youtube_icon">
-                <div class="youtube_img">
-                    <img src="">
-                </div>
-                <div class="kr">
-                    <img src="">
-                </div>
+                <img class="youtube_img" src="assets/icons/youtube-logo.svg">
             </div>
+            <div class="kr" style="color: gray">KR</div>
 
         </div>
 
@@ -31,47 +30,86 @@
             <div class="search_container">
 
                 <div class="search_box">
-                    <a href="">
-                        <img class="keyboard_icon">
-                    </a>
                     <div class="search_input">
-                        <input type="text" placeholder="검색">
+                        <input style="color:white; width:100%; border-style:none; background-color: #181818; align-self: center" type="text" placeholder="검색">
+                        <div style="margin-top:2px;">
+                            <img class="keyboard_icon"
+                                src="data:image/gif;base64,R0lGODlhEwALAKECAAAAABISEv///////yH5BAEKAAIALAAAAAATAAsAAAIdDI6pZ+suQJyy0ocV3bbm33EcCArmiUYk1qxAUAAAOw=="
+                                alt="Keyboard Icon" style="background-color:white; margin: 0 10px 0 0;">
+                        </div>
                     </div>
                 </div>
 
                 <button class="search_icon_box">
-                    <img src="scope_icon">
-                    <div class="tooltop">검색</div>
+                    <img class="search_icon" src="assets/icons/search.svg">
+                    <!-- <div style="font-size: 6px" class="tooltop">검색</div> -->
 
                 </button>
 
             </div>
 
-            <div class="voice-over">
-                <button>
-                    <img src="">
-                    <div class="tooltop">음성으로 검색</div>
-                </button>
+            <div class="voice_over_box">
+                
+                    <img class="voice_over_icon" src="assets/icons/voice-search-icon.svg">
+                    <!-- <div class="tooltop">음성으로 검색</div> -->
+            
             </div>
         </div>
 
         <div class="right_section">
 
             <div class="make_video_box">
-                <img src="">
-                <div class="tooltip">만들기</div>
+                <img style="width: 24px; height:24px;" src="assets/icons/upload.svg">
+                <!-- <div class="tooltip">만들기</div> -->
             </div>
 
             <div class="notification_box">
                 <div class="noti_icon">
-                    <img src="">
+                    <img style="width: 24px; height:24px;" src="assets/icons/notifications.svg">
                 </div>
                 <div class="noti_count_box">
-                    
+                    <span style="font-size: 12px; color:black;">9</span>
                 </div>
+            </div>
+
+            <div class="profile_box">
+                <img style="width: 24px; height:24px;background-color:#181818" src="assets/images/avatars/avatar-1.png">
             </div>
         </div>
 
     </div>
+
+    <!-- <div class="sidebar">
+        <div class="menu_list">
+            <div class="home_menu">
+                <div class="home_icon_box">
+                    <img src="">
+                </div>
+                <span>홈</span>
+            </div>
+
+            <div class="shorts_menu">
+                <div class="shorts_icon_box">
+                    <img src="">
+                </div>
+                <span>Shorts</span>
+            </div>
+
+            <div class="subscribe_menu">
+                <div class="subscribe_icon_box">
+                    <img src="">
+                </div>
+                <span>구독</span>
+            </div>
+
+            <div class="mypage_menu">
+                <div class="mypage_icon_box">
+                    <img src="">
+                </div>
+                <span>내 페이지</span>
+            </div>
+        </div>
+    </div> -->
 </body>
+
 </html>
