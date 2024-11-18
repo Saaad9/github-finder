@@ -1,0 +1,119 @@
+.contents {
+   display: flex;
+   flex-direction: row; /* 수평 정렬 */
+   flex-wrap: wrap; /* 요소의 개수가 콘테이너를 벗어나면 줄바꿈 */
+   align-content: baseline;
+   top: 50px; /* 헤더 높이만큼 */
+   left: 80px; /* 사이드바 너비만큼 */
+   margin: 20px 0; /* 적당한 간격 */
+   width: calc(100% - 120px);
+   height: 100%;
+   position: relative;
+}
+
+
+/* 여기까지 상단 추천 카테고리!!!!!!!!! */
+
+.recommand_menu_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    background-color: #181818;
+    top: 45px;
+    height: 50px;
+    z-index: 5000;
+    overflow-x: scroll;
+}
+
+.recommand_menu_list .menuBox {
+    display: flex; /* 요소 정렬 */
+    flex-direction: row; /* 주축 x축, 수평 정렬*/
+    align-items: center; /* 텍스트 y축 기준으로 중앙 배치*/
+    justify-content: space-between; /* 페이지 너비 늘려도 적절히 크기 조절?*/
+    font-size: 14px;
+    border: 1px solid white;
+    border-radius: 20px 20px 20px 20px;
+    padding: 0 12px;
+    margin-right: 12px;
+    height: 32px;
+    flex-shrink: 0; /* 요소들이 깨지지 않게 */
+}
+/* 여기까지 상단 추천 카테고리!!!!!!!!! */
+
+
+
+/* 여기서부터 동영상 리스트(컨텐츠) 부분!!!!!!!!!!!!!!! */
+
+/* 각 영상 정보를 담을 컨테이너 */
+.content {
+    margin-top: 50px;
+    margin-right: 20px;
+    display: block;
+    position: relative;
+    height: fit-content;
+}
+
+/* 섬네일 영역 */
+.thumbnail_box {
+    width: fit-content;
+    position: relative;
+}
+
+/* 실제 섬네일 이미지 */
+.content .thumbnail_box .thumbnail {
+    width: 360px;
+    border-radius: 20px 20px;
+}
+
+/* 영상 플레이타임 */
+.content .thumbnail_box .playtime {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: black;
+    border-radius: 20%;
+    font-size: 12px;
+    padding: 2px;
+
+}
+
+/* 섬네일 밑 영상 상세 정보 */
+.video_details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* 채널 섬네일 영역 */
+.profile_box {    
+    /* position: relative; */
+    /* width: fit-content; */
+}
+
+/* 실제 채널 섬네일 */
+.profile_img {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+/* 영상 정보 제목, 유튜버 이름, 조회수 등 */
+.details_box {
+    margin-left: -120px;
+    flex-grow: 0;
+}
+
+.more {
+    align-self: baseline;
+}
+
+/* 더보기 아이콘 */
+.more_icon {
+    width: 6px;
+    background-color: white;
+}

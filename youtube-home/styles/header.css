@@ -7,14 +7,15 @@
     position: fixed;
     top: 0;
     left: 0;
-
+    z-index: 500;
+    background-color: #181818;
 }
 /* 헤더 좌측 */
 .left_section {
     display: flex;
     flex-direction: row;
     align-self: center; 
-    margin: 5px 5px 0 5px;
+    margin: 5px 5px 0 30px;
 }
 
 /* 햄버거 아이콘 */
@@ -27,13 +28,13 @@
 .left_section .youtube_icon {
     display: flex;
     align-items: center;
+    margin-left: 15px;
 }
 
 /* 유튜브 아이콘 영역 */
 .left_section .youtube_icon .youtube_img {
     width: 93px;
     height: 24px;
-    align-self: center;
 }
 
 /* KR 텍스트 */
@@ -116,7 +117,7 @@
     display: flex;
     align-items: center;
     margin: 5px 5px 0 5px;
-    width: 300px;
+    width: 150px;
     /* border: 1px solid red; */
     justify-content:space-around;
 }
