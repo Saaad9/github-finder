@@ -18,3 +18,8 @@
     flex-direction: column; /* flex요소들의 배치 방법을 수직으로 주축Y */
     justify-content: center; /* 각 메뉴의 중앙에 아이콘 텍스트가 위치할 수 있도록 이때 주축은 y축 */
 }
+
+/* 사이드바의 아이콘 */
+.home_icon img, .subscribe_icon img, .shorts_icon img, .mypage_icon img {
+    width: 24px; height:24px;
+}

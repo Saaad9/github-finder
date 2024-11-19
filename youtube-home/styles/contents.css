@@ -14,6 +14,7 @@
 
 /* 여기까지 상단 추천 카테고리!!!!!!!!! */
 
+/* 상단 추천 카테고리 영역 */
 .recommand_menu_list {
     display: flex;
     flex-direction: row;
@@ -24,28 +25,43 @@
     background-color: #181818;
     top: 45px;
     height: 50px;
-    z-index: 5000;
+    z-index: 50;
     overflow-x: scroll;
 }
 
-.recommand_menu_list .menuBox {
+/* 각 카테고리 */
+.menuBox {
     display: flex; /* 요소 정렬 */
     flex-direction: row; /* 주축 x축, 수평 정렬*/
     align-items: center; /* 텍스트 y축 기준으로 중앙 배치*/
     justify-content: space-between; /* 페이지 너비 늘려도 적절히 크기 조절?*/
     font-size: 14px;
-    border: 1px solid white;
-    border-radius: 20px 20px 20px 20px;
+    color: rgb(242, 242, 242);
+    border-radius: 10px 10px 10px 10px;
     padding: 0 12px;
     margin-right: 12px;
     height: 32px;
     flex-shrink: 0; /* 요소들이 깨지지 않게 */
+    background-color: rgb(46, 46, 46);
 }
-/* 여기까지 상단 추천 카테고리!!!!!!!!! */
+
+/* 마우스 올려놨을 때 시각 효과 */
+.menuBox:hover {
+    background-color: gray;
+    color: rgb(31, 31, 31);
+}
+
+/* 메뉴 클릭 시  */
+.menuBox:active {
+    background-color: rgb(242, 242, 242);
+    color: rgb(31, 31, 31);
+}
+
+/* 여기까지 상단 추천 카테고리----------------------------------------------------------------------------*/
 
 
 
-/* 여기서부터 동영상 리스트(컨텐츠) 부분!!!!!!!!!!!!!!! */
+/* 여기서부터 메인컨텐츠 -----------------------------------------------------------! */
 
 /* 각 영상 정보를 담을 컨테이너 */
 .content {
@@ -63,13 +79,13 @@
 }
 
 /* 실제 섬네일 이미지 */
-.content .thumbnail_box .thumbnail {
+.thumbnail_box img {
     width: 360px;
     border-radius: 20px 20px;
 }
 
 /* 영상 플레이타임 */
-.content .thumbnail_box .playtime {
+.playtime {
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -90,13 +106,7 @@
 }
 
 /* 채널 섬네일 영역 */
-.profile_box {    
-    /* position: relative; */
-    /* width: fit-content; */
-}
-
-/* 실제 채널 섬네일 */
-.profile_img {
+.video_profile_box img {    
     border-radius: 50%;
     width: 36px;
     height: 36px;
@@ -108,12 +118,13 @@
     flex-grow: 0;
 }
 
+/* 더보기 영역 */
 .more {
-    align-self: baseline;
+    align-self: baseline; /* 위쪽 배치 */
 }
 
 /* 더보기 아이콘 */
-.more_icon {
+.more img {
     width: 6px;
     background-color: white;
 }

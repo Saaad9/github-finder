@@ -19,30 +19,34 @@
 }
 
 /* 햄버거 아이콘 */
-.left_section .hamburger_icon {
+.hamburger_icon {
     width: 24px;
     height: 24px;
 }
 
 /* YouTube 로고 */
-.left_section .youtube_icon {
+.youtube_icon {
     display: flex;
     align-items: center;
     margin-left: 15px;
 }
 
 /* 유튜브 아이콘 영역 */
-.left_section .youtube_icon .youtube_img {
+.youtube_icon img {
     width: 93px;
     height: 24px;
 }
 
 /* KR 텍스트 */
-.left_section .kr {
-    color: var(--yt-spec-text-secondary);
+.kr {
+    color: #616161;
     margin: 0 0 0 -9px; /* 왼쪽으로 당김 */
     font-size: 10px; /* 작은 글씨 크기 */
+    color: gray
 }
+
+
+/* 헤더 좌측 섹션 여기까지--------------------------------------- */
 
 /* 헤더 중앙 */
 .middle_section {
@@ -51,45 +55,73 @@
     flex: 0 1 732px;
     flex-direction: row;
     align-items: center;
+    height: 100%;
 }
 
 /* 중앙에서 검색창 부분 영역 생성 */
-.middle_section .search_container {
+.search_container {
     width: 100%;
     display: flex;
-    position: relative;
-    
+    height: fit-content;
 }
 
-/* 검색창 왼쪽 부분 */
-.middle_section .search_container .search_box {
+/* 검색창 왼쪽 부분 input 과 키보드가 들어갈 곳 */
+.search_box {
+    display: flex;
     width: 100%;
     border: 1px solid gray; 
     border-radius: 40px 0 0 40px; /*  왼쪽은 둥글게 오른쪽은 직각*/
+    padding: 8px 0; 
 }
 
 /* 검색어 입력하는 부분 */
-.middle_section .search_container .search_box .search_input {
-    display: flex; /* 안의 요소들이 column 형식으로 정렬 */ 
+.search_input {
+    display: flex; 
     align-items: center;
     margin-left: 10px; /*  둥근 모서리로부터 조금 떨어지게 */
+    width: 100%;
+}
+
+/* 검색어 입력창 */
+.search_input input {
+    color:white; 
+    width:100%; 
+    border-style:none; 
+    background-color: #181818; 
+}
+
+/* 화상키보드 아이콘 */
+.search_input img {
+    background-color:white; 
+    margin-right: 5px;
 }
 
 /* 검색창 오른쪽 돋보기 영역 */
-.search_icon_box {
+.search_icon {
+    display: flex;
+    position: relative;
     border-radius: 0 40px 40px 0; /* 오른쪽은 둥글게 왼쪽은 직각 */
     border: 1px solid gray; 
     width: 64px;
-    background-color: rgb(49, 47, 47);
-    display: flex;
-    align-items: center;
+    background-color: rgb(41, 41, 41);
+    align-items: center; /* y축 기준 중앙정렬 */
+    justify-content: center;
+}
+
+/* tooltip 표시 */
+.search_icon:hover,
+.voice_over_box:hover,
+.make_video_box:hover,
+.notification_box:hover{
+    .tooltip {
+        display: flex;
+    }
 }
 
 /* 돋보기 아이콘 */
-.search_icon {
-    margin-left: 5px;
+.search_icon img {
     width: 24px;
-    height:24px; 
+    height: 24px; 
 }
 
 /* 음성 인식 검색 영역 */
@@ -102,33 +134,52 @@
     display: flex; /* 중앙 배치 용이하게 */
     align-items: center; /* 아이콘 중앙 정렬 */
     margin-left: 20px; /*  검색창과 간격 지정*/
-    background-color: rgb(49, 47, 47);
+    background-color: rgb(41, 41, 41);
+    position: relative;
 }
 
-
-.voice_over_box .voice_over_icon {
+/* 음성 검색 아이콘 */
+.voice_over_box img {
     background-color: rgb(49, 47, 47);
     width: 20px;
     margin: 5px;  /* 간격 조정*/
 }
 
 
+/* 헤더 중간 섹션 여기까지------------------------------------ */
+
+/* 헤더 오른쪽 섹션 */
 .right_section {
     display: flex;
     align-items: center;
-    margin: 5px 5px 0 5px;
+    gap: 20px;
     width: 150px;
+    /* margin-top: 20px; */
+    margin-right: 20px;
     /* border: 1px solid red; */
     justify-content:space-around;
 }
 
-.right_section .notification_box {
-    position: relative;
+.make_video_box, .notification_box, .profile_box, .voice_over_box, .search_box{
     display: flex;
-    align-items: center;
+    position: relative;
 }
 
-.right_section .notification_box .noti_count_box {
+/* 업로드 아이콘 */
+.make_video_box img {
+    width: 24px; 
+    height:24px;
+}
+
+/* 알림 아이콘 */
+.noti_icon img {
+    margin-top: 5px; /* 업로드, 프로필 이미지랑 아이콘 자체 높이가 좀 달라서 */
+    width: 24px; 
+    height:24px;
+}
+
+/* 알림 개수 들어갈 빨간 원 */
+.noti_count_box {
     position: absolute;
     background-color: #e1002d;
     border-radius: 50%;
@@ -140,6 +191,19 @@
     justify-content: center; /* 수평 중앙 정렬 */
     right: -7px;
     top: -7px;
+    margin-top: 5px; /* 업로드, 프로필 이미지랑 아이콘 자체 높이가 좀 달라서 */
 }
 
+/* 알림 텍스트 */
+.noti_count_box span {
+    font-size: 12px; 
+    color:black;
+}
 
+/* 사용자 프로필 아이콘 영역 */
+.profile_box img {
+    width: 24px; 
+    height:24px;
+    background-color:#181818;
+    border-radius: 50%;
+}

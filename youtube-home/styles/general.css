@@ -10,3 +10,20 @@
     width: 100%;
     height: 100vh;
 }
+
+/* 아이콘 도움말 */
+.tooltip {
+    display: none;
+    position: absolute;
+    color: white;
+    border-radius: 10px;
+    background-color: #616161;
+    padding: 8px;
+    margin-top: 60px;
+    z-index: 300;
+    font-size: 12px;
+    
+    /* 텍스트가 한줄로 안나와요 ㅠㅠ */
+    width:70px;
+    flex-wrap: nowrap;
+}

@@ -11,160 +11,175 @@
 </head>
 
 <body>
-    <div class="header">
-
+    <!-- 헤더 영역 -->
+    <header class="header">
         <div class="left_section">
 
+            <!-- 햄버거 모양 메뉴 -->
             <div class="hamburger_icon">
                 <img src="assets/icons/hamburger-menu.svg">
             </div>
 
+            <!-- 메인 로고  -->
             <div class="youtube_icon">
-                <img class="youtube_img" src="assets/icons/youtube-logo.svg">
+                <img src="assets/icons/youtube-logo.svg">
             </div>
-            <div class="kr" style="color: gray">KR</div>
+            <span class="kr">KR</span>
 
         </div>
 
+        <!-- 헤더의 중간 영역 -->
         <div class="middle_section">
-
+            <!-- 검색창 컨테이너 -->
             <div class="search_container">
-
+                <!-- 검색창의 좌측 input과 키보드 아이콘이 들어감 -->
                 <div class="search_box">
                     <div class="search_input">
-                        <input style="color:white; width:100%; border-style:none; background-color: #181818; align-self: center" type="text" placeholder="검색">
-                        <div style="margin-top:2px;">
-                            <img class="keyboard_icon"
-                                src="data:image/gif;base64,R0lGODlhEwALAKECAAAAABISEv///////yH5BAEKAAIALAAAAAATAAsAAAIdDI6pZ+suQJyy0ocV3bbm33EcCArmiUYk1qxAUAAAOw=="
-                                alt="Keyboard Icon" style="background-color:white; margin: 0 10px 0 0;">
-                        </div>
+                        <input type="text" placeholder="검색">
+                        <!-- 화상 키보드 아이콘 -->
+                        <img src="data:image/gif;base64,R0lGODlhEwALAKECAAAAABISEv///////yH5BAEKAAIALAAAAAATAAsAAAIdDI6pZ+suQJyy0ocV3bbm33EcCArmiUYk1qxAUAAAOw=="
+                            alt="Keyboard Icon">
                     </div>
                 </div>
 
-                <button class="search_icon_box">
-                    <img class="search_icon" src="assets/icons/search.svg">
-                    <!-- <div style="font-size: 6px" class="tooltop">검색</div> -->
-
-                </button>
-
+                <!-- 돋보기 아이콘 영역 -->
+                <div class="search_icon">
+                    <img src="assets/icons/search.svg">
+                    <div class="tooltip">검색</div>
+                </div>
             </div>
 
+            <!-- 음성 검색 영역 -->
             <div class="voice_over_box">
-                
-                    <img class="voice_over_icon" src="assets/icons/voice-search-icon.svg">
-                    <!-- <div class="tooltop">음성으로 검색</div> -->
-            
+                    <img src="assets/icons/voice-search-icon.svg">
+                    <div class="tooltip">음성으로 검색</div>
             </div>
         </div>
 
+        <!-- 헤더 오른쪽 영역 -->
         <div class="right_section">
-
+            <!-- 업로드 버튼 -->
             <div class="make_video_box">
-                <img style="width: 24px; height:24px;" src="assets/icons/upload.svg">
-                <!-- <div class="tooltip">만들기</div> -->
+                <img src="assets/icons/upload.svg">
+                <div class="tooltip">만들기</div>
             </div>
 
+            <!-- 알림 버튼 -->
             <div class="notification_box">
+                <!-- 알림 아이콘 (벨모양) -->
                 <div class="noti_icon">
-                    <img style="width: 24px; height:24px;" src="assets/icons/notifications.svg">
+                    <img src="assets/icons/notifications.svg">
                 </div>
+                <!-- 알림 갯수 영역 -->
                 <div class="noti_count_box">
-                    <span style="font-size: 12px; color:black;">9</span>
+                    <span>9</span>
                 </div>
+                <div class="tooltip">알림</div>
             </div>
 
+            <!-- 프로필 아이콘  -->
             <div class="profile_box">
-                <img style="width: 24px; height:24px;background-color:#181818" src="assets/images/avatars/avatar-1.png">
+                <img src="assets/images/avatars/avatar-1.png">
             </div>
         </div>
+    </header>
 
-    </div>
-
-    <div class="sidebar">
-        <div class="menu_list">
+    <!-- 좌측 사이드바 -->
+    <aside class="sidebar">
+        <!-- 메뉴 컨테이너 -->
+        <nav class="menu_list">
+            <!-- 홈 버튼 -->
             <div class="home_menu">
-                <div class="home_icon_box">
-                    <img style="width: 24px; height:24px;" src="assets/icons/home.svg">
+                <div class="home_icon">
+                    <img src="assets/icons/home.svg">
                 </div>
                 <span>홈</span>
             </div>
-
+            
+            <!--Short 버튼  -->
             <div class="shorts_menu">
-                <div class="shorts_icon_box">
-                    <img style="width: 24px; height:24px;" src="assets/icons/originals.svg">
+                <div class="shorts_icon">
+                    <img src="assets/icons/originals.svg">
                 </div>
                 <span>Shorts</span>
             </div>
 
+            <!-- 구독한 채널의 영상 버튼  -->
             <div class="subscribe_menu">
-                <div class="subscribe_icon_box">
-                    <img style="width: 24px; height:24px;" src="assets/icons/subscriptions.svg">
+                <div class="subscribe_icon">
+                    <img src="assets/icons/subscriptions.svg">
                 </div>
                 <span>구독</span>
             </div>
 
+            <!-- 내 채널 메뉴 -->
             <div class="mypage_menu">
-                <div class="mypage_icon_box">
-                    <img style="width: 24px; height:24px;" src="assets/images/avatars/avatar-1.png">
+                <div class="mypage_icon">
+                    <img src="assets/images/avatars/avatar-1.png">
                 </div>
                 <span>내 페이지</span>
             </div>
-        </div>
-    </div>
+        </nav>
+    </aside>
 
-    <div class="contents">
-        <div class="recommand_menu_list">
+    <!-- 메인 컨텐츠 영역  -->
+    <main class="contents">
+        <!-- 상단 추천 카테고리 영역 -->
+        <nav class="recommand_menu_list">
             <div class="menuBox">
-                <p class="menu_name">전체</p>
+                <p>전체</p>
             </div>
             <div class="menuBox">
-                <p class="menu_name">게임</p>
+                <p>게임</p>
             </div>
             <div class="menuBox">
-                <p class="menu_name">뉴스</p>
+                <p>뉴스</p>
             </div>
             <div class="menuBox">
-                <p class="menu_name">라이브</p>
+                <p>라이브</p>
             </div>
             <div class="menuBox">
-                <p class="menu_name">음악</p>
+                <p>음악</p>
             </div>
             <div class="menuBox">
-                <p class="menu_name">믹스</p>
+                <p>믹스</p>
             </div>
             <div class="menuBox">
-                <p class="menu_name">스케치 코미디</p>
+                <p>스케치 코미디</p>
             </div>
             <div class="menuBox">
-                <p class="menu_name">액션 어드벤처 게임</p>
+                <p>액션 어드벤처 게임</p>
             </div>
             <div class="menuBox">
-                <p class="menu_name">요리</p>
+                <p>요리</p>
             </div>
             <div class="menuBox">
-                <p class="menu_name">최근에 업로드된 영상</p>
+                <p>최근에 업로드된 영상</p>
             </div>
             <div class="menuBox">
-                <p class="menu_name">감상한 동영상</p>
+                <p>감상한 동영상</p>
             </div>
             <div class="menuBox">
-                <p class="menu_name">새로운 맞춤 동영상</p>
+                <p>새로운 맞춤 동영상</p>
             </div>
 
-        </div>
-
-        <div class="content">
+        </nav>
+        
+        <!-- 동영상 컨테이너 -->
+        <article class="content">
             <div class="thumbnail_box">
-                <img class="thumbnail" src="https://i.ytimg.com/vi/TwQMVRl7P0s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDHdCN6HJIQES6q989rHRMUVp19tw"/>
+                <img src="https://i.ytimg.com/vi/TwQMVRl7P0s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDHdCN6HJIQES6q989rHRMUVp19tw"/>
                 <span class="playtime">14:54</span>
             </div>
             
+            <!-- 동영상 컨테이너 하단 상세 영역 -->
             <div class="video_details">
-                
-                <div class="profile_box">
-                    <img class="profile_img" src="https://yt3.ggpht.com/ytc/AIdro_mxXaPgErLAfey6DejfqB8OPuSwK8GZwowkPQd6h3lPrug=s68-c-k-c0x00ffffff-no-rj"/>
+                <!-- 왼쪽 채널 프로필 이미지 영역 -->
+                <div class="video_profile_box">
+                    <img src="https://yt3.ggpht.com/ytc/AIdro_mxXaPgErLAfey6DejfqB8OPuSwK8GZwowkPQd6h3lPrug=s68-c-k-c0x00ffffff-no-rj"/>
                 </div>
 
+                <!-- 중간 제목, 채널이름, 조회수 표시 영역 -->
                 <div class="details_box">
                     <div class="title">드디어 올 것이 왔습니다..</div>
                     <div class="channel_name">형독방송</div>
@@ -172,24 +187,28 @@
                     <span>1일 전</span>
                 </div>
                 
+                <!-- 오른쪽 더보기 아이콘 영역  -->
                 <div class="more">
-                    <img class="more_icon" src="assets/icons/more.svg"/>
+                    <img src="assets/icons/more.svg"/>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="content">
+         <!-- 동영상 컨테이너 -->
+         <article class="content">
             <div class="thumbnail_box">
-                <img class="thumbnail" src="https://i.ytimg.com/vi/TwQMVRl7P0s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDHdCN6HJIQES6q989rHRMUVp19tw"/>
+                <img src="https://i.ytimg.com/vi/TwQMVRl7P0s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDHdCN6HJIQES6q989rHRMUVp19tw"/>
                 <span class="playtime">14:54</span>
             </div>
             
+            <!-- 동영상 컨테이너 하단 상세 영역 -->
             <div class="video_details">
-                
-                <div class="profile_box">
-                    <img class="profile_img" src="https://yt3.ggpht.com/ytc/AIdro_mxXaPgErLAfey6DejfqB8OPuSwK8GZwowkPQd6h3lPrug=s68-c-k-c0x00ffffff-no-rj"/>
+                <!-- 왼쪽 채널 프로필 이미지 영역 -->
+                <div class="video_profile_box">
+                    <img src="https://yt3.ggpht.com/ytc/AIdro_mxXaPgErLAfey6DejfqB8OPuSwK8GZwowkPQd6h3lPrug=s68-c-k-c0x00ffffff-no-rj"/>
                 </div>
 
+                <!-- 중간 제목, 채널이름, 조회수 표시 영역 -->
                 <div class="details_box">
                     <div class="title">드디어 올 것이 왔습니다..</div>
                     <div class="channel_name">형독방송</div>
@@ -197,23 +216,28 @@
                     <span>1일 전</span>
                 </div>
                 
+                <!-- 오른쪽 더보기 아이콘 영역  -->
                 <div class="more">
-                    <img class="more_icon" src="assets/icons/more.svg"/>
+                    <img src="assets/icons/more.svg"/>
                 </div>
             </div>
-        </div>
-        <div class="content">
+        </article>
+
+         <!-- 동영상 컨테이너 -->
+         <article class="content">
             <div class="thumbnail_box">
-                <img class="thumbnail" src="https://i.ytimg.com/vi/TwQMVRl7P0s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDHdCN6HJIQES6q989rHRMUVp19tw"/>
+                <img src="https://i.ytimg.com/vi/TwQMVRl7P0s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDHdCN6HJIQES6q989rHRMUVp19tw"/>
                 <span class="playtime">14:54</span>
             </div>
             
+            <!-- 동영상 컨테이너 하단 상세 영역 -->
             <div class="video_details">
-                
-                <div class="profile_box">
-                    <img class="profile_img" src="https://yt3.ggpht.com/ytc/AIdro_mxXaPgErLAfey6DejfqB8OPuSwK8GZwowkPQd6h3lPrug=s68-c-k-c0x00ffffff-no-rj"/>
+                <!-- 왼쪽 채널 프로필 이미지 영역 -->
+                <div class="video_profile_box">
+                    <img src="https://yt3.ggpht.com/ytc/AIdro_mxXaPgErLAfey6DejfqB8OPuSwK8GZwowkPQd6h3lPrug=s68-c-k-c0x00ffffff-no-rj"/>
                 </div>
 
+                <!-- 중간 제목, 채널이름, 조회수 표시 영역 -->
                 <div class="details_box">
                     <div class="title">드디어 올 것이 왔습니다..</div>
                     <div class="channel_name">형독방송</div>
@@ -221,23 +245,28 @@
                     <span>1일 전</span>
                 </div>
                 
+                <!-- 오른쪽 더보기 아이콘 영역  -->
                 <div class="more">
-                    <img class="more_icon" src="assets/icons/more.svg"/>
+                    <img src="assets/icons/more.svg"/>
                 </div>
             </div>
-        </div>
-        <div class="content">
+        </article>
+
+         <!-- 동영상 컨테이너 -->
+         <article class="content">
             <div class="thumbnail_box">
-                <img class="thumbnail" src="https://i.ytimg.com/vi/TwQMVRl7P0s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDHdCN6HJIQES6q989rHRMUVp19tw"/>
+                <img src="https://i.ytimg.com/vi/TwQMVRl7P0s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDHdCN6HJIQES6q989rHRMUVp19tw"/>
                 <span class="playtime">14:54</span>
             </div>
             
+            <!-- 동영상 컨테이너 하단 상세 영역 -->
             <div class="video_details">
-                
-                <div class="profile_box">
-                    <img class="profile_img" src="https://yt3.ggpht.com/ytc/AIdro_mxXaPgErLAfey6DejfqB8OPuSwK8GZwowkPQd6h3lPrug=s68-c-k-c0x00ffffff-no-rj"/>
+                <!-- 왼쪽 채널 프로필 이미지 영역 -->
+                <div class="video_profile_box">
+                    <img src="https://yt3.ggpht.com/ytc/AIdro_mxXaPgErLAfey6DejfqB8OPuSwK8GZwowkPQd6h3lPrug=s68-c-k-c0x00ffffff-no-rj"/>
                 </div>
 
+                <!-- 중간 제목, 채널이름, 조회수 표시 영역 -->
                 <div class="details_box">
                     <div class="title">드디어 올 것이 왔습니다..</div>
                     <div class="channel_name">형독방송</div>
@@ -245,23 +274,28 @@
                     <span>1일 전</span>
                 </div>
                 
+                <!-- 오른쪽 더보기 아이콘 영역  -->
                 <div class="more">
-                    <img class="more_icon" src="assets/icons/more.svg"/>
+                    <img src="assets/icons/more.svg"/>
                 </div>
             </div>
-        </div>
-        <div class="content">
+        </article>
+
+         <!-- 동영상 컨테이너 -->
+         <article class="content">
             <div class="thumbnail_box">
-                <img class="thumbnail" src="https://i.ytimg.com/vi/TwQMVRl7P0s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDHdCN6HJIQES6q989rHRMUVp19tw"/>
+                <img src="https://i.ytimg.com/vi/TwQMVRl7P0s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDHdCN6HJIQES6q989rHRMUVp19tw"/>
                 <span class="playtime">14:54</span>
             </div>
             
+            <!-- 동영상 컨테이너 하단 상세 영역 -->
             <div class="video_details">
-                
-                <div class="profile_box">
-                    <img class="profile_img" src="https://yt3.ggpht.com/ytc/AIdro_mxXaPgErLAfey6DejfqB8OPuSwK8GZwowkPQd6h3lPrug=s68-c-k-c0x00ffffff-no-rj"/>
+                <!-- 왼쪽 채널 프로필 이미지 영역 -->
+                <div class="video_profile_box">
+                    <img src="https://yt3.ggpht.com/ytc/AIdro_mxXaPgErLAfey6DejfqB8OPuSwK8GZwowkPQd6h3lPrug=s68-c-k-c0x00ffffff-no-rj"/>
                 </div>
 
+                <!-- 중간 제목, 채널이름, 조회수 표시 영역 -->
                 <div class="details_box">
                     <div class="title">드디어 올 것이 왔습니다..</div>
                     <div class="channel_name">형독방송</div>
@@ -269,84 +303,15 @@
                     <span>1일 전</span>
                 </div>
                 
+                <!-- 오른쪽 더보기 아이콘 영역  -->
                 <div class="more">
-                    <img class="more_icon" src="assets/icons/more.svg"/>
+                    <img src="assets/icons/more.svg"/>
                 </div>
             </div>
-        </div>
-        <div class="content">
-            <div class="thumbnail_box">
-                <img class="thumbnail" src="https://i.ytimg.com/vi/TwQMVRl7P0s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDHdCN6HJIQES6q989rHRMUVp19tw"/>
-                <span class="playtime">14:54</span>
-            </div>
-            
-            <div class="video_details">
-                
-                <div class="profile_box">
-                    <img class="profile_img" src="https://yt3.ggpht.com/ytc/AIdro_mxXaPgErLAfey6DejfqB8OPuSwK8GZwowkPQd6h3lPrug=s68-c-k-c0x00ffffff-no-rj"/>
-                </div>
-
-                <div class="details_box">
-                    <div class="title">드디어 올 것이 왔습니다..</div>
-                    <div class="channel_name">형독방송</div>
-                    <span>조회수 13만회</span>
-                    <span>1일 전</span>
-                </div>
-                
-                <div class="more">
-                    <img class="more_icon" src="assets/icons/more.svg"/>
-                </div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="thumbnail_box">
-                <img class="thumbnail" src="https://i.ytimg.com/vi/TwQMVRl7P0s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDHdCN6HJIQES6q989rHRMUVp19tw"/>
-                <span class="playtime">14:54</span>
-            </div>
-            
-            <div class="video_details">
-                
-                <div class="profile_box">
-                    <img class="profile_img" src="https://yt3.ggpht.com/ytc/AIdro_mxXaPgErLAfey6DejfqB8OPuSwK8GZwowkPQd6h3lPrug=s68-c-k-c0x00ffffff-no-rj"/>
-                </div>
-
-                <div class="details_box">
-                    <div class="title">드디어 올 것이 왔습니다..</div>
-                    <div class="channel_name">형독방송</div>
-                    <span>조회수 13만회</span>
-                    <span>1일 전</span>
-                </div>
-                
-                <div class="more">
-                    <img class="more_icon" src="assets/icons/more.svg"/>
-                </div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="thumbnail_box">
-                <img class="thumbnail" src="https://i.ytimg.com/vi/TwQMVRl7P0s/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDHdCN6HJIQES6q989rHRMUVp19tw"/>
-                <span class="playtime">14:54</span>
-            </div>
-            
-            <div class="video_details">
-                
-                <div class="profile_box">
-                    <img class="profile_img" src="https://yt3.ggpht.com/ytc/AIdro_mxXaPgErLAfey6DejfqB8OPuSwK8GZwowkPQd6h3lPrug=s68-c-k-c0x00ffffff-no-rj"/>
-                </div>
-
-                <div class="details_box">
-                    <div class="title">드디어 올 것이 왔습니다..</div>
-                    <div class="channel_name">형독방송</div>
-                    <span>조회수 13만회</span>
-                    <span>1일 전</span>
-                </div>
-                
-                <div class="more">
-                    <img class="more_icon" src="assets/icons/more.svg"/>
-                </div>
-            </div>
-        </div>
-    </div>
+        </article>
+        
+        
+    </main>
 </body>
 
 </html>
