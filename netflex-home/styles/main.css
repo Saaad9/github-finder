@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     height: 30rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .ad_container {
@@ -11,7 +11,7 @@
     width: 100%;
     height: 100%;
     align-items: center;
-    /* justify-content: center; 가로 중앙 정렬 */
+    
     background-color: black; /* 여백 색상 */
 }
 
@@ -24,16 +24,27 @@
     background-position: center; /* 이미지 위치 중앙으로 */
     width: 100%;
     height: 100%;
+    filter: blur(0.5px); /* 흐릿하게 만들기 */
 }
 
 .ad_video_info {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    /* position: absolute; */
     gap: 0.5rem;
     margin-left: 2rem;
     z-index: 20;
     width: 25rem;
+}
+
+@media (max-width: 750px) {
+    .ad_container {
+        justify-content: center; /* 가로 중앙 정렬 */
+        align-items: end;
+    }
+    .ad_video_info {
+        margin-bottom: 2rem;
+    }
 }
 
 .ad_video_title {
@@ -55,8 +66,55 @@
     color: white;
     padding: 0.5rem 1rem;
     opacity: 0.8;
+    cursor:pointer;
 }
 
 .ad_video_description {
     font-size: 1rem;
+}
+
+.recommand_video_list_container {
+    display: block;
+    width: 100%;
+    padding: 1rem 0 0 0;
+    height: fit-content;
+}
+
+.video_genre {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 1rem 0rem 1rem 1rem;
+}
+
+.recommand_video_list {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    height: fit-content;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+.recommand_video_list::-webkit-scrollbar {
+    display: none; /* Chrome, Safari에서 스크롤바 숨기기 */
+}
+
+.video_poster {
+    width: 10rem;
+    border-radius: 0.3rem;
+    cursor:pointer;
+}
+
+.video_poster:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+    z-index: 50;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .video_poster {
+        width: 8rem;
+    }
 }

@@ -1,6 +1,8 @@
 :root {
     --netflix--background--color : rgb(13, 13, 13);
-    --example--adImage :url("https://upload.wikimedia.org/wikipedia/ko/b/b8/1917%EC%98%81%ED%99%94_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg")
+    --example--adImage :url("https://media.themoviedb.org/t/p/w533_and_h300_bestv2/liuBLPXvisMRo5w2JEKHXceWq5u.jpg");
+    /* --user--profileImg: url("../assets//image/user.png"); */
+    --netflix--logo :url("https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/542b1dfabbf3959908f69be546879952/Netflix-Brand-Logo.png");
 }
 
 body {
@@ -11,4 +13,5 @@ body {
     height: 100%;
     background-color: var(--netflix--background--color);
     color: white;
+    overflow-x: hidden;
 }

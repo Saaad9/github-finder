@@ -6,15 +6,21 @@
     position: absolute;
     padding: 0.5rem;
     width: 100%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    z-index: 30;
+    height: 3rem;
 }
 
 .netflix_logo {
     width: 10rem;
-    height: 3rem;
+    height: fit-content;
+    margin-top: 10px;
+    cursor:pointer;
 }
 
 .header_userprofile {
     width: 3rem;
     height: 3rem;
+    margin-right: 2rem;
+    cursor:pointer;
 }
