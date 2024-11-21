@@ -1,5 +1,6 @@
 :root {
     --netflix--background--color : rgb(13, 13, 13);
+    --example--adImage :url("https://upload.wikimedia.org/wikipedia/ko/b/b8/1917%EC%98%81%ED%99%94_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg")
 }
 
 body {

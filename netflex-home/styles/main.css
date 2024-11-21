@@ -1,0 +1,61 @@
+.main_container {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    border: 1px solid red;
+}
+
+.ad_container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+
+.ad_img {
+    position: absolute;
+    background-image: var(--example--adImage);
+    background-repeat:no-repeat;
+    width: 100%;
+    height: 100%;
+    /* 재홍님 코드 참조 */
+    object-fit: contain;
+    background-color: black;
+}
+
+.ad_video_info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 0.5rem;
+    margin-left: 2rem;
+    z-index: 20;
+    width: 25rem;
+}
+
+.ad_video_title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.ad_video_action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ad_video_action_play {
+    border: none;
+    border-radius: 20%;
+    background-color: rgb(38, 28, 27);
+    color: white;
+    padding: 0.5rem 1rem;
+    opacity: 0.8;
+}
+
+.ad_video_description {
+    font-size: 1rem;
+}
