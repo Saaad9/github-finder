@@ -3,12 +3,10 @@
     flex-direction: row;
     align-items: center;
     position: relative;
-    top: 6rem;
-    left: 5rem;
-    height: 5rem;
+    height: 5em;
     gap: 1.5em;
-    width: 55%;
-    padding: 1em 0em 1em 0em;
+    width: calc(100%- 2em);
+    padding: 1em 2em;
     flex-wrap: nowrap;
     overflow-x: scroll; /* X축 스크롤 활성화 */
     overflow-y: hidden;
@@ -17,7 +15,6 @@
     border-radius: 1em;
     border: 1px solid rgb(219, 219, 219);
     font-size: 1.2em;
-    
 }
 
 .stories_container::-webkit-scrollbar {
@@ -36,14 +33,14 @@
 }
 
 .story_username {
-    font-size: 1.2em;
+    font-size: 1rem;
     color: var(--gray--fontcolor);
 }
 
 .story_profile_img {
     /* position: absolute; */
-    width: 4em;
-    height: 4em;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
 }
 
@@ -53,7 +50,7 @@
     width: 55%;
     padding: 1em 1em 1em 0em;
     overflow-y: scroll;
-    top: 9em;
+    top: 5rem;
     left: 5rem;
     gap: 1em;
     font-size: 1.4em;
@@ -117,7 +114,7 @@
 
 .post_actions {
     display: flex;
-    padding: 1em 0em;
+    padding: 1em 0em 0em 0em;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -139,7 +136,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1.4rem;   
+    font-size: 1em;   
 }
 
 .liked_user_img {
@@ -155,7 +152,7 @@
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
-    font-size: 1.4rem;
+    font-size: 1em;
 }
 
 .post_username {
@@ -166,6 +163,6 @@
 
 
 .post_time {
-    font-size: 1.4em;
+    font-size: 1em;
     color: var(--gray--fontcolor) ;
 }

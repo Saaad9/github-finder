@@ -14,4 +14,5 @@ body {
     background-color: var(--netflix--background--color);
     color: white;
     overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
