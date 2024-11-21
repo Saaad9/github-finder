@@ -4,11 +4,12 @@
    flex-wrap: wrap; /* 요소의 개수가 콘테이너를 벗어나면 줄바꿈 */
    align-content: baseline;
    top: 50px; /* 헤더 높이만큼 */
-   left: 80px; /* 사이드바 너비만큼 */
-   margin: 20px 0; /* 적당한 간격 */
-   width: calc(100% - 120px);
+   left: 72px; /* 사이드바 너비만큼 */
+   margin: 20px 20px; /* 적당한 간격 */
+   width: calc(100% - 72px);
    height: 100%;
    position: relative;
+   gap: 1rem;
 }
 
 
