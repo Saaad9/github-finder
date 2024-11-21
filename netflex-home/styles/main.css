@@ -11,6 +11,8 @@
     width: 100%;
     height: 100%;
     align-items: center;
+    /* justify-content: center; 가로 중앙 정렬 */
+    background-color: black; /* 여백 색상 */
 }
 
 
@@ -18,11 +20,10 @@
     position: absolute;
     background-image: var(--example--adImage);
     background-repeat:no-repeat;
+    background-size: contain; /* 이미지 비율 유지하며 컨테이너에 맞춤 */
+    background-position: center; /* 이미지 위치 중앙으로 */
     width: 100%;
     height: 100%;
-    /* 재홍님 코드 참조 */
-    object-fit: contain;
-    background-color: black;
 }
 
 .ad_video_info {
