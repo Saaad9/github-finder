@@ -23,3 +23,7 @@
 .home_icon img, .subscribe_icon img, .shorts_icon img, .mypage_icon img {
     width: 24px; height:24px;
 }
+
+.mypage_icon img {
+    border-radius: 50%;
+}
