@@ -102,6 +102,12 @@
 
 .video_poster {
     width: 10rem;
+    height: 20rem;
+    background-image: var(--poster--image);
+    background-repeat:no-repeat;
+    background-size: contain; /* 이미지 비율 유지하며 컨테이너에 맞춤 */
+    background-position: center; /* 이미지 위치 중앙으로 */
+    flex-shrink: 0;
     border-radius: 0.3rem;
     cursor:pointer;
 }
