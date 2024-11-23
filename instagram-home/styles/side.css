@@ -21,6 +21,8 @@
     width: 4em;
     height: 4em;
     border-radius: 50%;
+    box-shadow: 0 0 0 0.15rem white,
+    0 0 0 0.25rem #dbdbdbed;
 }
 
 .side_userInfo {
@@ -61,6 +63,8 @@
     height: 3em;
     width: 3em;
     border-radius: 50%;
+    box-shadow: 0 0 0 0.15rem white,
+    0 0 0 0.25rem #dbdbdbed;
 }
 
 @media (max-width: 720px) {

@@ -43,6 +43,8 @@
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
+    box-shadow: 0 0 0 0.15rem white,
+    0 0 0 0.25rem #dbdbdbed;
 }
 
 .posts_container {
@@ -92,6 +94,8 @@
     height: 3em;
     border-radius: 50%;
     cursor: pointer;
+    box-shadow: 0 0 0 0.15rem white,
+    0 0 0 0.25rem #dbdbdbed;
 }
 
 .post_top_right {
