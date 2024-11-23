@@ -14,7 +14,9 @@
 <body>
     <header class="header">
         <h1 class="header_left">
-            <img class="instagram_icon" src="assets/icons/logo.svg" alt="인스타그램 메인로고" />
+            <a href="#">
+                <img class="instagram_icon" src="assets/icons/logo.svg" alt="인스타그램 메인로고" />
+            </a>
         </h1>
 
         <div class="header_searchbar">
@@ -23,10 +25,19 @@
         </div>
 
         <div class="header_right">
-            <img class="home_button" src="assets/icons/home.svg" alt="홈 이동" />
-            <img class="market_button" src="assets/icons/shop.svg" alt="마켓 이동" />
-            <img class="messenger_button" src="assets/icons/messenger.svg" alt="메신저 이동" />
-            <img class="myprofile_button" src="assets/images/avatar.png" alt="내 프로필 이동" />
+            <a href="">
+                <img class="home_button" src="assets/icons/home.svg" alt="홈 이동" />
+            </a>
+            <a href="">
+                <img class="market_button" src="assets/icons/shop.svg" alt="마켓 이동" />
+            </a>
+            <a href="">
+                <img class="messenger_button" src="assets/icons/messenger.svg" alt="메신저 이동" />
+            </a>
+            <a href="">
+                <img class="myprofile_button" src="assets/images/avatar.png" alt="내 프로필 이동" />
+            </a>
+            
         </div>
 
     </header>
@@ -169,7 +180,9 @@
                         <span class="post_username">user</span>
                     </div>
                     <div class="post_top_right">
-                        <img class="post_more_btn" src="assets/icons/more.svg" alt="더보기"/>
+                        <button>
+                            <img class="post_more_btn" src="assets/icons/more.svg" alt="더보기"/>
+                        </button>
                     </div>
                 </div>
     
@@ -180,8 +193,12 @@
                 <div class="post_bottom">
                     <div class="post_actions">
                         <div class="post_actions_left">
-                            <img class="like_btn" src="assets/icons/heart.svg" alt="좋아요 버튼"/>
-                            <img class="comment_btn" src="assets/icons/comment.svg" alt="댓글 달기 버튼">
+                            <button>
+                                <img class="like_btn" src="assets/icons/heart.svg" alt="좋아요 버튼"/>
+                            </button>
+                            <button>
+                                <img class="comment_btn" src="assets/icons/comment.svg" alt="댓글 달기 버튼">
+                            </button>
                         </div>
                     
                         <div class="post_actions_right">
@@ -207,15 +224,18 @@
                 </div>
                 
             </article>
+
             <article class="post">
-                
+            
                 <div class="post_top">
                     <div class="post_top_left">
                         <img class="post_user_img" src="assets/images/avatar.png" alt="포스팅한 사용자의 프로필 이미지"/>
                         <span class="post_username">user</span>
                     </div>
                     <div class="post_top_right">
-                        <img class="post_more_btn" src="assets/icons/more.svg" alt="더보기"/>
+                        <button>
+                            <img class="post_more_btn" src="assets/icons/more.svg" alt="더보기"/>
+                        </button>
                     </div>
                 </div>
     
@@ -226,8 +246,12 @@
                 <div class="post_bottom">
                     <div class="post_actions">
                         <div class="post_actions_left">
-                            <img class="like_btn" src="assets/icons/heart.svg" alt="좋아요 버튼"/>
-                            <img class="comment_btn" src="assets/icons/comment.svg" alt="댓글 달기 버튼">
+                            <button>
+                                <img class="like_btn" src="assets/icons/heart.svg" alt="좋아요 버튼"/>
+                            </button>
+                            <button>
+                                <img class="comment_btn" src="assets/icons/comment.svg" alt="댓글 달기 버튼">
+                            </button>
                         </div>
                     
                         <div class="post_actions_right">
@@ -253,6 +277,7 @@
                 </div>
                 
             </article>
+            
     </main>
     <aside class="side_container">
         <div class="side_myprofile">
@@ -287,56 +312,11 @@
                         <span class="suggested_user_followers">User1님 외 3명이 팔로우합니다.</span>
                     </div>
         
-                    <span class="follow_btn">
+                    <button class="follow_btn">
                         <strong>
                             Follow
                         </strong>
-                    </span>
-                </div>
-
-                <div class="suggested_user">
-                    <img class="suggested_userImg" src="assets/images/avatar.png" alt="추천된 사용자 이미지">
-        
-                    <div class="suggested_userInfo">
-                        <span class="suggested_userId"> User_ID</span>
-                        <span class="suggested_user_followers">User1님 외 3명이 팔로우합니다.</span>
-                    </div>
-        
-                    <span class="follow_btn">
-                        <strong>
-                            Follow
-                        </strong>
-                    </span>
-                </div>
-
-                <div class="suggested_user">
-                    <img class="suggested_userImg" src="assets/images/avatar.png" alt="추천된 사용자 이미지">
-        
-                    <div class="suggested_userInfo">
-                        <span class="suggested_userId"> User_ID</span>
-                        <span class="suggested_user_followers">User1님 외 3명이 팔로우합니다.</span>
-                    </div>
-        
-                    <span class="follow_btn">
-                        <strong>
-                            Follow
-                        </strong>
-                    </span>
-                </div>
-
-                <div class="suggested_user">
-                    <img class="suggested_userImg" src="assets/images/avatar.png" alt="추천된 사용자 이미지">
-        
-                    <div class="suggested_userInfo">
-                        <span class="suggested_userId"> User_ID</span>
-                        <span class="suggested_user_followers">User1님 외 3명이 팔로우합니다.</span>
-                    </div>
-        
-                    <span class="follow_btn">
-                        <strong>
-                            Follow
-                        </strong>
-                    </span>
+                    </button>
                 </div>
                 <div class="suggested_user">
                     <img class="suggested_userImg" src="assets/images/avatar.png" alt="추천된 사용자 이미지">
@@ -346,12 +326,13 @@
                         <span class="suggested_user_followers">User1님 외 3명이 팔로우합니다.</span>
                     </div>
         
-                    <span class="follow_btn">
+                    <button class="follow_btn">
                         <strong>
                             Follow
                         </strong>
-                    </span>
-                </div><div class="suggested_user">
+                    </button>
+                </div>
+                <div class="suggested_user">
                     <img class="suggested_userImg" src="assets/images/avatar.png" alt="추천된 사용자 이미지">
         
                     <div class="suggested_userInfo">
@@ -359,12 +340,13 @@
                         <span class="suggested_user_followers">User1님 외 3명이 팔로우합니다.</span>
                     </div>
         
-                    <span class="follow_btn">
+                    <button class="follow_btn">
                         <strong>
                             Follow
                         </strong>
-                    </span>
-                </div><div class="suggested_user">
+                    </button>
+                </div>
+                <div class="suggested_user">
                     <img class="suggested_userImg" src="assets/images/avatar.png" alt="추천된 사용자 이미지">
         
                     <div class="suggested_userInfo">
@@ -372,12 +354,13 @@
                         <span class="suggested_user_followers">User1님 외 3명이 팔로우합니다.</span>
                     </div>
         
-                    <span class="follow_btn">
+                    <button class="follow_btn">
                         <strong>
                             Follow
                         </strong>
-                    </span>
-                </div><div class="suggested_user">
+                    </button>
+                </div>
+                <div class="suggested_user">
                     <img class="suggested_userImg" src="assets/images/avatar.png" alt="추천된 사용자 이미지">
         
                     <div class="suggested_userInfo">
@@ -385,11 +368,11 @@
                         <span class="suggested_user_followers">User1님 외 3명이 팔로우합니다.</span>
                     </div>
         
-                    <span class="follow_btn">
+                    <button class="follow_btn">
                         <strong>
                             Follow
                         </strong>
-                    </span>
+                    </button>
                 </div>
             </div>
 

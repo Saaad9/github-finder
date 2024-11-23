@@ -14,11 +14,13 @@
     justify-content: space-between;
     box-sizing: border-box; /* padding, border를 포함한 크기 설정 */
     padding: 1em;
+    cursor: pointer;
 }
 
 .side_myImg {
     width: 4em;
     height: 4em;
+    border-radius: 50%;
 }
 
 .side_userInfo {
@@ -46,12 +48,19 @@
     color: rgb(2, 148, 245);
     font-weight: bold;
     font-size: 1.2em;
+    background-color: var(--background--color);
+    cursor: pointer;
+}
 
+.switch_btn:hover, 
+.follow_btn:hover {
+    color: brown;
 }
 
 .suggested_userImg {
     height: 3em;
     width: 3em;
+    border-radius: 50%;
 }
 
 @media (max-width: 720px) {
@@ -90,6 +99,11 @@
     justify-content: space-between;
     box-sizing: border-box; /* padding, border를 포함한 크기 설정 */
     padding: 1em;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.suggested_user:hover {
+    background-color:bisque;
 }
 
 .suggested_userInfo {

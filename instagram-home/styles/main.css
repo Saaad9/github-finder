@@ -23,6 +23,7 @@
 
 .story {
     text-align: center;
+    cursor: pointer;
 }
 
 .story_profile_box {
@@ -89,6 +90,8 @@
 .post_user_img {
     width: 3em;
     height: 3em;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .post_top_right {
@@ -124,6 +127,11 @@
     flex-direction: row;
     align-items: center;
     gap: 1em;
+}
+
+.like_btn:hover,.comment_btn:hover,.saved_btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 .post_actions_right {

@@ -17,3 +17,10 @@ body {
     background-color: var(--background--color);
     overflow-x: hidden;
 }
+
+/*  전역적으로 테두리 제거 */
+button {
+    border: none;
+    background-color: white;
+    cursor:pointer;
+}
