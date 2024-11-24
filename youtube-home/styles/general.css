@@ -27,3 +27,9 @@
     width:70px;
     flex-wrap: nowrap;
 }
+
+button {
+    border: none;
+    background-color: #181818;
+    cursor: pointer;
+}
