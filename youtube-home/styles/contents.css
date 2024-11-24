@@ -71,6 +71,7 @@
     display: block;
     position: relative;
     height: fit-content;
+    cursor: pointer;
 }
 
 /* 섬네일 영역 */
