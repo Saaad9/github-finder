@@ -2,12 +2,12 @@
     font-size: 10px; /* 전역적으로 폰트 사이즈 설정*/
     margin-top: 40px; /* 헤더 높이만큼  */
     text-align: center; /* 텍스트 중앙 정렬 */
-    width: 72px;
-    margin-left: 5px;
+    width: 75px;
     height: 100%;
     display: block; /* 쌓이는 형식 */ 
     position: fixed; /*  화면 좌측 고정 */
     background-color: #181818;
+    margin-left: 5px;
 }
 
 /* 각 사이드바의 메뉴에 대해 높이 한번에 지정 */
