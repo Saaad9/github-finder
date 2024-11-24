@@ -10,26 +10,34 @@
     z-index: 500;
     background-color: #181818;
     box-sizing: border-box;
+    padding: 0 10px;
 }
 /* 헤더 좌측 */
 .left_section {
     display: flex;
     flex-direction: row;
-    align-self: center; 
-    padding-left: 30px;
+    align-items: center;
+}
+
+.hamburger_icon {
+    display: flex;
+    flex-direction: row;
+    width: 70px;
+    justify-content: center;
 }
 
 /* 햄버거 아이콘 */
-.hamburger_icon {
+.hamburger_icon img {
+    padding: 5px 0 0 0;
     width: 24px;
     height: 24px;
+    
 }
 
 /* YouTube 로고 */
 .youtube_icon {
     display: flex;
     align-items: center;
-    margin-left: 30px;
 }
 
 /* 유튜브 아이콘 영역 */
@@ -43,7 +51,8 @@
     color: #616161;
     margin: 0 0 0 -9px; /* 왼쪽으로 당김 */
     font-size: 10px; /* 작은 글씨 크기 */
-    color: gray
+    color: gray;
+    align-self: baseline;
 }
 
 
@@ -122,6 +131,12 @@
 .search_icon img {
     width: 24px;
     height: 24px; 
+    background-color: rgb(41, 41, 41);
+    border: none;
+}
+
+.search_icon button {
+    background-color: rgb(41, 41, 41);
 }
 
 /* 음성 인식 검색 영역 */
@@ -148,10 +163,6 @@
     align-items: center;
     gap: 20px;
     width: 150px;
-    /* margin-top: 20px; */
-    margin-right: 20px;
-    margin-left: 20px;
-    /* border: 1px solid red; */
     justify-content:space-around;
 }
 
