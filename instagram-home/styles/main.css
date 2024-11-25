@@ -11,9 +11,9 @@
     overflow-x: scroll; /* X축 스크롤 활성화 */
     overflow-y: hidden;
     scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border-radius: 1em;
-    border: 1px solid rgb(219, 219, 219);
+    /* border: 1px solid rgb(219, 219, 219); */
     font-size: 1.2em;
 }
 
@@ -50,11 +50,11 @@
 .posts_container {
     position: relative;
     display: block;
-    width: 55%;
+    width: 50%;
     padding: 1em 1em 1em 0em;
     overflow-y: scroll;
-    top: 5rem;
-    left: 10%;
+    /* top: 5rem; */
+    left: 20%;
     gap: 1em;
     font-size: 1.4em;
 }
@@ -67,9 +67,9 @@
     display: block;
     border-bottom: 1px solid var(--gray--fontcolor);
     margin: 1em 0em;
-    border: 1px solid rgb(219, 219, 219);
-    background-color: white;
-    border-radius: 1em;
+    /* border: 1px solid rgb(219, 219, 219); */
+    /* background-color: white; */
+    /* border-radius: 1em; */
     width: 100%;
 }
 

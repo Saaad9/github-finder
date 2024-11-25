@@ -1,10 +1,19 @@
 .side_container {
     position: absolute;
     right: 0;
-    top: 5rem;
-    width: 30%;
+    top: 0rem;
+    width: 25%;
     padding: 2em 2em;
     display: block;
+}
+
+@media (max-width: 1160px) {
+    .side_container {
+        display: none;
+    }
+    .posts_container {
+        width: 60%;
+    }
 }
 
 .side_myprofile {
