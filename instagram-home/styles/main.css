@@ -4,17 +4,14 @@
     align-items: center;
     position: relative;
     height: 5em;
-    gap: 1.5em;
-    width: calc(100%- 2em);
+    gap: 1.6em;
+    width: 80%;
     padding: 1em 2em;
     flex-wrap: nowrap;
     overflow-x: scroll; /* X축 스크롤 활성화 */
     overflow-y: hidden;
     scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
-    /* background-color: #ffffff; */
     border-radius: 1em;
-    /* border: 1px solid rgb(219, 219, 219); */
-    font-size: 1.2em;
 }
 
 .stories_container::-webkit-scrollbar {
@@ -40,8 +37,8 @@
 
 .story_profile_img {
     /* position: absolute; */
-    width: 4rem;
-    height: 4rem;
+    width: 4em;
+    height: 4em;
     border-radius: 50%;
     box-shadow: 0 0 0 0.15rem white,
     0 0 0 0.25rem #dbdbdbed;
@@ -49,14 +46,17 @@
 
 .posts_container {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
-    padding: 1em 1em 1em 0em;
+    padding: 1em 1em 1em 1em;
     overflow-y: scroll;
     /* top: 5rem; */
     left: 20%;
     gap: 1em;
     font-size: 1.4em;
+    
 }
 
 .posts_container::-webkit-scrollbar {
@@ -65,12 +65,12 @@
 
 .post {
     display: block;
-    border-bottom: 1px solid var(--gray--fontcolor);
+    border-bottom: 1px solid var(--border--gray);
     margin: 1em 0em;
     /* border: 1px solid rgb(219, 219, 219); */
     /* background-color: white; */
     /* border-radius: 1em; */
-    width: 100%;
+    width: 70%;
 }
 
 .post_top {
@@ -107,6 +107,9 @@
 .post_iamges {
     width: 100%;
     padding-left: 2.5%;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .post_img {

@@ -2,6 +2,7 @@
     --instagram--maincolor : rgb(240, 240, 240);
     --gray--fontcolor :rgb(115, 115, 115);
     --background--color :rgb(255, 255, 255);
+    --border--gray :rgb(219, 219, 219);
 }
 
 body { 
@@ -23,4 +24,9 @@ button {
     border: none;
     background-color: white;
     cursor:pointer;
+}
+
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 부모요소 따라감 */ 
 }
