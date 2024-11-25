@@ -1,0 +1,11 @@
+.nav_bar {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    position: fixed;
+}
+
+.nav_bar > a > .div {
+    display: flex;
+    flex-direction: row;
+}
