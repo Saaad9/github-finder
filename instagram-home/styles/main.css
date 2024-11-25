@@ -5,7 +5,7 @@
     position: relative;
     height: 5em;
     gap: 1.6em;
-    width: 80%;
+    width: 75%;
     padding: 1em 2em;
     flex-wrap: nowrap;
     overflow-x: scroll; /* X축 스크롤 활성화 */
@@ -50,6 +50,8 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
+    max-width: 580px;
+    
     padding: 1em 1em 1em 1em;
     overflow-y: scroll;
     /* top: 5rem; */
@@ -57,6 +59,19 @@
     gap: 1em;
     font-size: 1.4em;
     
+}
+
+@media (max-width: 1160px) {
+   .stories_container {
+        min-width: 520px;
+   }
+}
+
+@media (max-width: 767px) {
+    .posts_container {
+        width: 100%;
+        left: 0;
+    }
 }
 
 .posts_container::-webkit-scrollbar {
@@ -71,6 +86,7 @@
     /* background-color: white; */
     /* border-radius: 1em; */
     width: 70%;
+    min-width: 470px;
 }
 
 .post_top {

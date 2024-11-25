@@ -11,10 +11,6 @@
     .side_container {
         display: none;
     }
-    .posts_container {
-        width: 60%;
-        padding: 0% 10%;
-    }
 }
 
 .side_myprofile {
@@ -77,12 +73,9 @@
     0 0 0 0.25rem #dbdbdbed;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1160px) {
     .side_container {
         display: none;
-    }
-    .posts_container {
-        width: 80%;
     }
 }
 

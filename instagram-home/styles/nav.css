@@ -13,6 +13,12 @@
     border-right: 0.5px solid var(--border--gray);
 }
 
+@media (max-width : 767px) {
+    .nav_bar{
+        display: none;
+    }
+}
+
 @media (max-width : 1160px) {
     .nav_bar {
         width: 72px;
@@ -33,7 +39,6 @@
         justify-content: center;
 
     }
-
 
     .nav_footer > a > div {
         display: flex;
