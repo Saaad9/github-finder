@@ -110,3 +110,30 @@
     width: 100%;
     display: flex;
 }
+
+
+/* 하단 메뉴바 */
+.nav_bottom {
+    display: none;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content:space-around;
+    align-items: center;
+    height: 48px;
+    background-color: white;
+    border-top: 1px solid var(--border--gray);
+}
+
+.nav_bottom_myImg {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+@media (max-width : 767px) {
+    .nav_bottom {
+        display: flex;
+    }
+}
