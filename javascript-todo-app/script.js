@@ -1,3 +1,4 @@
+
 // todo_list 요소를 불러옴
 const list = document.querySelector(".todo_list");
 
@@ -36,23 +37,30 @@ function createTodoElement(todo) {
     checkbox_elem.class = "todo_checkbox";
     checkbox_elem.type = 'checkbox';
     checkbox_elem.checked = todo.checked;    
+    
+    if(todo.checked) {
+        todo_elem.classList.add('checked');
+    }
 
     checkbox_elem.addEventListener('change', () => {
         todo.checked = checkbox_elem.checked;
         if(todo.checked) {
-            todo_elem.style = "opacity: 0.7;";
+            todo_elem.classList.add('checked');
             input_elem.style="text-decoration: line-through;";
+            saveLocalStorage(todos);
         }
         else {
-            todo_elem.style = "opacity: 1;";
+            todo_elem.classList.remove('checked');
+            todo_checked = false;
             input_elem.style="text-decoration: none;";
+            saveLocalStorage(todos);
         }
     });
     
     // input textbox 생성
     const input_elem = document.createElement('input');
     input_elem.type = "text";
-    input_elem.innerText = todo.text;
+    input_elem.value = todo.text;
     input_elem.className = 'todo_input';
     // 태그가 생성된 순간 포커싱되도록
     input_elem.focus();
@@ -67,12 +75,14 @@ function createTodoElement(todo) {
         input_elem.disabled = true;
         todo.text = input_elem.value;
         input_elem.classList.remove('focused');
+        saveLocalStorage(todos);
     });
     // 사용자가 엔터쳤을때
     input_elem.addEventListener('keydown', (e) => {
         if(e.key === 'Enter') {
             todo.text = input_elem.value;
             input_elem.blur();
+            saveLocalStorage(todos)
         } 
     });
   
@@ -85,7 +95,6 @@ function createTodoElement(todo) {
         input_elem.classList.add("focused");
         input_elem.focus();
         input_elem.disabled = false;
-        todo.text = input_elem.value;
     });
 
     // remove 버튼 생성
@@ -97,6 +106,7 @@ function createTodoElement(todo) {
         // id가 다른것들만 todos에 남음
         todos = todos.filter(item => item.id!== todo.id);
         todo_elem.remove();
+        saveLocalStorage(todos);
     });
 
 
@@ -107,3 +117,22 @@ function createTodoElement(todo) {
 
     return {todo_elem, input_elem};
 }
+
+function saveLocalStorage(todos) {
+    localStorage.setItem('todos', JSON.stringify(todos));
+    console.log(localStorage.getItem('todos'));
+}
+
+function loadLocalStorage() {
+    if(localStorage.getItem('todos')){
+        todos = JSON.parse(localStorage.getItem('todos'));
+        todos.forEach(todo => {
+            const {todo_elem} = createTodoElement(todo);
+            list.appendChild(todo_elem);
+            console.log(todo);
+        });
+        console.log(localStorage.getItem('todos'));
+    }
+}
+
+loadLocalStorage();

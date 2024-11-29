@@ -55,6 +55,14 @@ body {
     margin-bottom: 15px;
 }
 
+.checked {
+    opacity: 0.7;
+    
+    .todo_input {
+        text-decoration: line-through;
+    }
+}
+
 button {
     border: none;
     background-color: lightblue;
@@ -80,3 +88,4 @@ button > img {
 .focused {
     border-bottom: 1px solid white;
 }
+
