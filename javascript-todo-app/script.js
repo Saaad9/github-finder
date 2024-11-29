@@ -1,63 +1,86 @@
-const add_todo_btn = document.getElementById("add_todo_btn");
+const add_btn = document.getElementById('add_btn');
 
-// Todo 추가 버튼
-add_todo_btn.addEventListener('click', (event) => {
-    // todoList 컨테이너 가져오기
-    const todo_list_div = document.querySelector(".todo_list");
+add_btn.addEventListener('click', createTodo);
 
-    // todo div 생성
-    const todo_div = document.createElement('div');
-    todo_div.className = "todo";
+let todos = [];
 
-    // todo_checkbox 생성
-    const todo_checkbox = document.createElement("input");
-    todo_checkbox.className = "todo_checkbox";
-    todo_checkbox.type = "checkbox";
+// Todo 객체 생성
+function createTodo() {
+    // todo 객체
+    const todo = {
+        id : Date.now(),
+        text : "",
+        checked : false,
+    }
+    // 배열의 앞에 todo element를 추가
+    todos.unshift(todo);
+    // todo 객체를 이용해서 todo element 생성
+    const todo_elem = createTodoElement(todo);
+    console.log(todo_elem);
 
-    // todo_input 생성
-    const todo_input = document.createElement("input");
-    todo_input.className = "todo_input";
-    todo_input.type = "text";
-    todo_input.placeholder = "입력하세요";
+    // todo_list 요소를 불러옴
+    const list = document.querySelector(".todo_list");
 
-    // 수정 버튼 생성
-    const todo_edit = document.createElement("button");
-    todo_edit.className = "todo_edit";
-    todo_edit.id = "todo_edit";
+    // todo_list의 맨앞에 todo element를 추가
+    list.prepend(todo_elem);
+}
+
+function createTodoElement(todo) {
+    // todo Element 
+    const todo_elem = document.createElement('div');
+    todo_elem.className = 'todo';
+
+    // checkbox 생성
+    const checkbox_elem = document.createElement('input');
+    checkbox_elem.class = "todo_checkbox";
+    checkbox_elem.type = 'checkbox';
+    checkbox_elem.checked = todo.checked;    
+
+    checkbox_elem.addEventListener('change', () => {
+        todo.checked = checkbox_elem.checked;
+        if(todo.checked) {
+            todo_elem.style = "opacity: 0.5;";
+            input_elem.style="text-decoration: line-through;";
+        }
+        else {
+            todo_elem.style = "opacity: 1;";
+            input_elem.style="text-decoration: none;";
+        }
+    });
     
-    const todo_edit_icon = document.createElement("img");
-    todo_edit_icon.src = "assets/icons/pencil.png";
-    todo_edit.appendChild(todo_edit_icon);
+    // input textbox 생성
+    const input_elem = document.createElement('input');
+    input_elem.type = "text";
+    input_elem.innerText = todo.text;
+    input_elem.className = 'todo_input';
 
-    // 삭제 버튼 생성
-    const todo_remove = document.createElement("button");
-    todo_remove.className = "todo_remove";
-    todo_remove.id = "todo_remove";
+    // input textbox 포커싱 빠지면
+    input_elem.addEventListener('blur',()=>{
+        input_elem.disabled = true;
+        todo.text = input_elem.value;
+        console.log(todo);
+    });
+  
+    // edit 버튼 생성
+    const edit_btn_elem = document.createElement('button');
+    edit_btn_elem.className = 'todo_edit';
+    edit_btn_elem.innerText = "Edit";
 
-    const todo_remove_icon = document.createElement("img");
-    todo_remove_icon.src = "assets/icons/delete.png";
-    todo_remove.appendChild(todo_remove_icon);
+    edit_btn_elem.addEventListener('click', () => {
+        input_elem.focus();
+        input_elem.disabled = false;
+        todo.text = input_elem.value;
+    });
 
-    // 생성한 요소들 이어주기
-    todo_div.appendChild(todo_checkbox);
-    todo_div.appendChild(todo_input);
-    todo_div.appendChild(todo_edit);
-    todo_div.appendChild(todo_remove);
+    // remove 버튼 생성
+    const remove_btn_elem = document.createElement('button');
+    remove_btn_elem.className = 'todo_remove';
+    remove_btn_elem.innerText = "Delete";
 
-    // todoList 컨테이너에 생성한 todo 추가
-    todo_list_div.appendChild(todo_div);
-});
+    todo_elem.appendChild(checkbox_elem);
+    todo_elem.appendChild(input_elem);
+    todo_elem.appendChild(edit_btn_elem);
+    todo_elem.appendChild(remove_btn_elem);
 
-// 현재 Todo 수정 버튼
-const todo_edit_btn = document.querySelector(".todo_edit");
-
-todo_edit_btn.addEventListener("click", (event) => {
-    // 부모요소 선택
-    const parent = todo_edit_btn.parentElement;
-    console.log(parent);
-    const input_tag = parent.querySelector("input.todo_input");
-    // 사용자가 입력한 text 가져오기
-    const value = input_tag.value;
-    // 삽입
-    input_tag.textContent = value;
-})
+    return todo_elem;
+}
