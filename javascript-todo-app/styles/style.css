@@ -74,6 +74,9 @@ button > img {
     width: 70%;
     background-color: lightblue;
     border: none;
-    border-bottom: 1px solid white;
     outline: none;
+}
+
+.focused {
+    border-bottom: 1px solid white;
 }
