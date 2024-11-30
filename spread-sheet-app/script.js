@@ -27,7 +27,7 @@ function initSpreadsheet() {
         let spreadSheetRow = [];
         for (let j = 0; j < COLS; j++) {
             let cell_data = "";
-            let is_header = false;
+            let isHeader = false;
             let disabeld = false;
             let rowName = i;
             let columnName = alphabets[j-1];
@@ -35,21 +35,21 @@ function initSpreadsheet() {
             // 행의 첫번째 요소일 때 숫자 삽입
             if (j === 0) {
                 cell_data = i;
-                is_header = true;
+                isHeader = true;
                 disabeld = true;
             }
             // 첫 번째 행일 때 숫자 삽입
             if (i === 0) {
                 // 알파벳 매칭 시켜야함
                 cell_data = alphabets[j-1];
-                is_header = true;
+                isHeader = true;
                 disabeld = true;
             }
 
             // [0,0] 데이터 x
             if (i === 0  && j === 0) {
                 cell_data = "";
-                is_header = true;
+                isHeader = true;
                 disabeld = true;
             }
 
@@ -57,13 +57,12 @@ function initSpreadsheet() {
                 columnName = "0";
             }
             
-            const cell = new Cell(is_header, disabeld, cell_data, i, j, rowName, columnName, false);
+            const cell = new Cell(isHeader, disabeld, cell_data, i, j, rowName, columnName, false);
             spreadSheetRow.push(cell);
         }
         spreadSheet.push(spreadSheetRow);
     }
     drawSheet();
-    console.log(spreadSheet);
 }
 
 initSpreadsheet();
@@ -79,8 +78,16 @@ function createCellElm (cell) {
         cellEl.classList.add("header");
     }
 
+    cellEl.addEventListener('keyup', (e) => {
+        if (e.key === "Enter") {
+            cellEl.blur();
+            cellEl.classList.remove("active");
+            cell.data = cellEl.value;
+        }
+    });
+
     cellEl.addEventListener('click',() =>{
-        // console.log(cell.rowName + " - " + cell.columnName); 
+
         const selectRow = cell.rowName;
         const selectColumn = cell.columnName;
 
@@ -91,20 +98,21 @@ function createCellElm (cell) {
         selectColumnElm.classList.add("selected");
         
         cellEl.classList.add("active");
-
-        
     });
 
     cellEl.addEventListener('blur', () => {
         cellEl.classList.remove("active");
+        cell.data = cellEl.value;
+
         const selectRow = cell.rowName;
         const selectColumn = cell.columnName;
 
-        const selectRowElm = document.getElementById("0" + selectColumn);
-        const selectColumnElm = document.getElementById(selectRow + "0");
+        // 헤더 선택
+        const row_header = document.getElementById("0" + selectColumn);
+        const column_header = document.getElementById(selectRow + "0");
 
-        selectRowElm.classList.remove("selected");
-        selectColumnElm.classList.remove("selected");
+        row_header.classList.remove("selected");
+        column_header.classList.remove("selected");
     });
 
     return cellEl;
@@ -122,3 +130,33 @@ function drawSheet() {
     }
 }
 
+
+const export_btn = document.getElementById('export-btn');
+
+export_btn.addEventListener('click',exportSpreadSheet);
+
+function exportSpreadSheet() {
+    let csv = "";
+
+    for (let i = 0; i < spreadSheet.length; i++) {
+        if (i === 0) {
+            continue;
+        }
+
+        csv += spreadSheet[i]
+            .filter((item) => !item.isHeader)
+            .map((item) => item.data)
+            .join(",") + "\r\n";
+    }   
+
+    console.log(csv);
+
+    const csvObj = new Blob([csv]);
+    const csvUrl = URL.createObjectURL(csvObj);
+    console.log('csvUrl:', csvUrl);
+
+    const a = document.createElement('a');
+    a.href = csvUrl;
+    a.download = 'spreadsheet name.csv';
+    a.click();
+}
