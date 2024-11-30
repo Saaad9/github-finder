@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
+
 <body>
     <header>
         <h1>GitHub Finder</h1>
@@ -20,7 +22,7 @@
             <div class="description">
                 <span>Enter a username to fetch a user profile and repos</span>
             </div>
-            
+
             <input type="text" id="search" placeholder="Enter username...">
         </article>
 
@@ -31,38 +33,61 @@
             </div>
             <div class="info-container">
                 <div class="repo-stats">
-                    <span class="blue">Public Repos: <span>53</span></span>
-                    <span class="gray">Public gists: <span>0</span></span>
-                    <span class="green">Followers: <span>1174</span></span>
-                    <span class="skyblue">Following: <span>0</span></span>
+                    <span class="blue">Public Repos:
+                        <span class="public-repos">53</span>
+                    </span>
+                    <span class="gray">Public gists:
+                        <span class="public-gists">0</span>
+                    </span>
+                    <span class="green">Followers:
+                        <span class="followers">1174</span>
+                    </span>
+                    <span class="skyblue">Following:
+                        <span class="following">0</span>
+                    </span>
                 </div>
                 <div class="info">
-                    <span>Company: <span>null</span></span>
-                    <span>Website/Blog: <span>https://twitter.com/natfriedman</span></span>
-                    <span>Location: <span>San Francisco, CA</span></span>
-                    <span>Member Since: <span>2011-01-25</span></span>
+                    <span>Company: 
+                        <span>null</span>
+                    </span>
+                    <span>Website/Blog: 
+                        <span class="url">https://twitter.com/natfriedman</span>
+                    </span>
+                    <span>Location: 
+                        <span class="location">San Francisco, CA</span>
+                    </span>
+                    <span>Member Since: 
+                        <span class="since">2011-01-25</span>
+                    </span>
                 </div>
             </div>
         </article>
 
         <article class="repos-container">
             <span class="title">Latest Repos</span>
-            
-            <figure class="repo">
-               <span class="repo-name">react-disney-deploy-test</span>
 
-               <div class="repo-stats">
-                     <span class="blue">Stars: <span>0</span></span>
-                     <span class="gray">Watchers: <span>0</span></span>
-                     <span class="green">Forks: <span>0</span></span>
-               </div>
+            <figure class="repo">
+                <span class="repo-name">react-disney-deploy-test</span>
+
+                <div class="repo-stats">
+                    <span class="blue">Stars: 
+                        <span class="stars">0</span>
+                    </span>
+                    <span class="gray">Watchers: 
+                        <span class="watchers">0</span>
+                    </span>
+                    <span class="green">Forks: 
+                        <span class="forks">0</span>
+                    </span>
+                </div>
             </figure>
 
         </article>
     </main>
-    
+
     <footer>
         <span>GitHub Finder©</span>
     </footer>
 </body>
+
 </html>
