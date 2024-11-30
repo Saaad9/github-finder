@@ -20,3 +20,17 @@
     height: 40px;
     text-align: center;
 }
+
+.header {
+    background-color: #ddd;
+}
+
+.active {
+    background-color: #ddd;
+    border : 2px solid lightblue;
+}
+
+.selected { 
+    background-color: lightblue;
+    color: white;
+}
