@@ -7,3 +7,16 @@
     margin-bottom: 10px;
     display: inline-block;
 }
+
+.cell-row { 
+    display: flex;
+}
+
+.cell {
+    width: 80px;
+    border: 1px solid lightgray; 
+    outline: none;
+    box-sizing: border-box;
+    height: 40px;
+    text-align: center;
+}
