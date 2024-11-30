@@ -1,0 +1,61 @@
+html {
+    font-size: 10px;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: rgb(69, 131, 237);
+    z-index: 5;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    background-color: rgb(247, 249, 250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+}
+
+h1 {
+    color: white;
+    background-color: rgb(69, 131, 237);
+    padding: 1rem;
+    margin: 0;
+    z-index: 5;
+}
+
+main {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 4rem;
+    width: 100%;
+    z-index: 1;
+
+}
+
+article {
+    background-color: white;
+    border: 1px solid rgb(242, 242, 242);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2rem;
+    margin: 2rem;
+}
