@@ -4,6 +4,9 @@ const ROWS = 10;
 const COLS = 10;
 const spreadSheet = [];
 
+const alphabets = 
+['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
 class Cell {
     constructor(isHeader, diabled, data, row, column, active = false) {
         this.isHeader = isHeader;
@@ -21,7 +24,23 @@ function initSpreadsheet() {
     for (let i = 0; i < ROWS; i++) {
         let spreadSheetRow = [];
         for (let j = 0; j < COLS; j++) {
-            const cell = new Cell(false, false, "", i, j, false);
+            let cell_data = "";
+            // 행의 첫번째 요소일 때 숫자 삽입
+            if (j === 0) {
+                cell_data = i;
+            }
+            // 첫 번째 행일 때 숫자 삽입
+            if (i === 0) {
+                // 알파벳 매칭 시켜야함
+                cell_data = alphabets[j-1];
+            }
+
+            // [0,0] 데이터 x
+            if (i === 0  && j === 0) {
+                cell_data = "";
+            }
+
+            const cell = new Cell(false, false, cell_data, i, j, false);
             spreadSheetRow.push(cell);
         }
         spreadSheet.push(spreadSheetRow);
@@ -53,3 +72,4 @@ function drawSheet() {
         spreadsheet_Container.appendChild(rowEl);
     }
 }
+
