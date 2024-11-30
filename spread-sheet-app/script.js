@@ -149,11 +149,11 @@ function exportSpreadSheet() {
             .join(",") + "\r\n";
     }   
 
-    console.log(csv);
+    // console.log(csv);
 
     const csvObj = new Blob([csv]);
     const csvUrl = URL.createObjectURL(csvObj);
-    console.log('csvUrl:', csvUrl);
+    // console.log('csvUrl:', csvUrl);
 
     const a = document.createElement('a');
     a.href = csvUrl;
