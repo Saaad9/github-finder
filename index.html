@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>GitHub Finder</h1>
+    </header>
+
+    <main>
+        <article class="search-container">
+            <div class="title">
+                <span>Search GitHub Users</span>
+            </div>
+            <div class="description">
+                <span>Enter a username to fetch a user profile and repos</span>
+            </div>
+
+            <input type="text" id="search" placeholder="Enter username...">
+        </article>
+
+        <article class="user-container">
+            <div class="img-container">
+                <img src="" alt="User Avatar">
+                <a href="" class="view-btn">View Profile</a>
+            </div>
+            <div class="info-container">
+                <div class="repo-stats">
+                    <span class="blue">Public Repos:
+                        <span id="public-repos"></span>
+                    </span>
+                    <span class="gray">Public gists:
+                        <span id="public-gists"></span>
+                    </span>
+                    <span class="green">Followers:
+                        <span id="followers"></span>
+                    </span>
+                    <span class="skyblue">Following:
+                        <span id="following"></span>
+                    </span>
+                </div>
+                <div class="info">
+                    <span>Company: 
+                        <span id="company"></span>
+                    </span>
+                    <span>Website/Blog: 
+                        <span id="blog"></span>
+                    </span>
+                    <span>Location: 
+                        <span id="location"></span>
+                    </span>
+                    <span>Member Since: 
+                        <span id="since"></span>
+                    </span>
+                </div>
+            </div>
+        </article>
+
+        <article class="repos-container">
+            <span class="title">Latest Repos</span>
+        </article>
+    </main>
+
+    <footer>
+        <span>GitHub Finder©</span>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

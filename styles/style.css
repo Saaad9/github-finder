@@ -1,0 +1,212 @@
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 2rem;
+    z-index: 5;
+}
+
+h1 {
+    color: white;
+    background-color: rgb(69, 131, 237);
+    padding: 1rem;
+    margin: 0;
+    z-index: 5;
+    font-size: 1.6rem;
+}
+
+main {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 4rem;
+    width: 100%;
+    z-index: 1;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+article {
+    background-color: white;
+    border: 1px solid rgb(242, 242, 242);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.search-container>.title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(51, 59, 64);
+}
+
+.search-container>.description {
+    font-size: 1.9rem;
+    color: rgb(150, 156, 163);
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.search-container>input {
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid rgb(242, 242, 242);
+    outline: none;
+    font-size: 1.6em;
+    color: rgb(51, 59, 64);
+    box-sizing: border-box;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 1.4rem;
+    
+}
+
+.user-container>.img-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 25%;
+
+    > img {
+        width: 100%;
+    }
+
+    > a {
+        background-color: rgb(69, 131, 237);
+        padding: 1rem;
+        border-radius: 1rem;
+        color: white;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+.user-container>.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 75%;
+}
+
+.user-container > .info-container > .repo-stats {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.user-container > .info-container > .repo-stats > span {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: white;
+}
+
+.user-container>.info-container > .info {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    border: 1px solid rgb(242, 242, 242);
+}
+
+.user-container>.info-container > .info > span {
+    padding: 2rem;
+}
+
+.repos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.4rem;
+}   
+
+.repos-container .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(51, 59, 64);
+}
+
+.repo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem;
+    border: 1px solid rgb(242, 242, 242);
+}
+
+.repo-name { 
+    display: flex;
+    width: 50%;
+    font-size: 1.6rem;
+    color: blue;
+    text-decoration: none;
+}
+
+.repo >.repo-stats {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+
+    
+}
+
+.repo >.repo-stats > span {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: white;
+}
+
+
+
+
+.blue {
+    background-color: rgb(69, 131, 237);
+}
+.gray {
+    background-color: gray
+}
+.green {
+    background-color: rgb(40, 167, 69);
+}
+.skyblue {
+    background-color: rgb(23, 162, 184);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    background-color: rgb(247, 249, 250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+}
