@@ -130,10 +130,10 @@ function renderUserInfo(user) {
 function renderRepos(data) {
     const repo_container = document.querySelector('.repos-container');
 
-    // 이전에 렌더링된 데이터가 있다면 삭제
-    if (repo_container.children.length > 0) {
-        repo_container.innerHTML = '';
-    }
+    // // 이전에 렌더링된 데이터가 있다면 삭제
+    // if (repo_container.children.length > 0) {
+    //     repo_container.innerHTML = '';
+    // }
 
     console.log(repo_container);
     
